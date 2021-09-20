@@ -1,0 +1,56 @@
+
+<h2>Rent a car</h2>
+<div class="flex">
+
+ 
+    <ul  class="col-md-6"  *ngFor="let car of cars">
+ 
+        <li class="list-group-item" style="text-align: center;" ><h2>{{car.description}}</h2></li>
+        <!-- <img src="../../../images/volvo2.jpg"> -->
+ 
+        <li class="list-group-item" >Id: {{car.id}}</li>
+        <li  class="list-group-item"   >brand: {{car.brandName}}</li>
+        <li class="list-group-item" >color: {{car.colorName}}</li>
+        <li class="list-group-item" >modelYear: {{car.modelYear}}</li>
+        <li class="list-group-item" >price: {{car.price}}</li>
+        <li class="list-group-item" >description: {{car.description}}</li>
+         
+
+         
+    </ul>
+     
+    <div *ngIf="dataLoaded==false" class="spinner-border text-success" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+
+
+
+
+
+
+      <form [formGroup]="rentalAddForm">
+        <div class="form-group col-md-12">
+          <label for="rentDate" class="form-label">Pick Up Date</label>
+          <div class="form-group mb-12">
+            <input class="form-control" type="date" id="rentDate" formControlName="rentDate"  />
+          </div>
+        </div>
+        
+        <div class="form-group col-md-12">
+          <label for="returnDate" class="form-label">Delivery Date</label>
+          <div class="form-group mb-12">
+            <input type="date" id="returnDate" formControlName="returnDate" class="form-control" />
+          </div>
+        </div>
+      
+        <div class="card-footer">
+          <button type="button" class="btn btn-fill btn-primary mb-2 me-2" (click)="addRental()" >
+            Next
+          </button>
+        </div>
+         
+      </form>
+    </div>
+     
+    
+     

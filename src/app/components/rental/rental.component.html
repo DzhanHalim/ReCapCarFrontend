@@ -1,0 +1,8 @@
+<ul>
+    <li class="list-group-item" style="text-align: center;" ><h2>Rentals</h2></li>
+    <li class="list-group-item" *ngFor="let rental of rentals">{{rental.brandName}}</li>
+</ul>
+ 
+<div *ngIf="dataLoaded==false" class="spinner-border text-success" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>

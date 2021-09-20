@@ -1,0 +1,36 @@
+<div class="md-3" >
+  <label for="exampleFormControlInput1" class="form-label  ">Search cars</label>
+  
+  <input type="text" class="form-control search-bar" [(ngModel)]="filterText" id="filterText" placeholder="name, brand or color of car">
+ 
+</div>
+<app-filter-car></app-filter-car>
+<div class="row">
+
+ 
+<ul  class="col-md-6"  *ngFor="let car of cars | filterPipe:filterText"  >
+  
+    <li class="list-group-item" style="text-align: center;" ><h2>Cars</h2></li>
+    <!-- <img src="../../../images/volvo2.jpg"> -->
+    <li class="list-group-item" ><img class="img-fluid" src="{{image}}"></li>
+    <li class="list-group-item" >Id: {{car.id}}</li>
+    <li  class="list-group-item"   >brand: {{car.brandName}}</li>
+    <li class="list-group-item" >color: {{car.colorName}}</li>
+    <li class="list-group-item" >modelYear: {{car.modelYear}}</li>
+    <li class="list-group-item" >price: {{car.price}}</li>
+    <li class="list-group-item" >description: {{car.description}}</li>
+ 
+    <li class="list-group-item" style="text-align: center;" > <div class="d-grid gap-2 col-6 mx-auto">
+      <button routerLink="/cars/cardetail/{{car.id}}" class="btn btn-primary" type="button">Info</button>
+       
+    </div></li> 
+     
+</ul>
+ 
+<div *ngIf="dataLoaded==false" class="spinner-border text-success" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+ 
+
+ 

@@ -1,0 +1,24 @@
+.search-form{
+    
+    display: flex;
+    
+}
+
+.search-bar{
+   margin-bottom: 1em;
+}
+
+.select-form{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    display: flex;
+     
+}
+.form-select{
+    margin:1em;
+}
+.btn-primary{
+    margin-top:1em;
+    margin-bottom:1em;
+
+}

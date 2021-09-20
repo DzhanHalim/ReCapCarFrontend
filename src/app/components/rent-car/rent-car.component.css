@@ -1,0 +1,16 @@
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.form-group{
+    margin:1em;
+}
+.col-md-6{
+    margin:1em;
+
+}
+h2{
+    text-align: center;
+}
