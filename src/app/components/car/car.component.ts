@@ -24,7 +24,7 @@ export class CarComponent implements OnInit {
   
   brands:Brand[]=[];
   dataLoaded:boolean=false;
-  constructor( private carService:CarService , private activatedRoute:ActivatedRoute,
+  constructor( private carService:CarService , private activatedRoute:ActivatedRoute, 
      private brandService:BrandService,private colorService:ColorService) { }
 
   ngOnInit(): void {
